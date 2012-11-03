@@ -18,3 +18,7 @@
 #
 
 include_recipe "ipxe::build"
+
+execute "make bin/undionly.kpxe" do
+  cwd "#{node['ipxe']['src_dir']}/src"
+end
