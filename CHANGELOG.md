@@ -3,5 +3,5 @@
 ## 0.1.0:
 
 * Initial release of ipxe
-* build and chainload recipes
+* install and chainload recipes
 

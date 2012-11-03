@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: ipxe
-# Recipe:: build
+# Recipe:: install
 #
 # Copyright 2012, Opscode, Inc.
 #

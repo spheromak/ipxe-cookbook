@@ -17,7 +17,9 @@
 # limitations under the License.
 #
 
-include_recipe "ipxe::build"
+include_recipe "ipxe::install"
+
+#template of the chainload script
 
 execute "make bin/undionly.kpxe" do
   cwd "#{node['ipxe']['src_dir']}/src"

@@ -8,14 +8,14 @@ The iPXE cookbook may be used in conjunction with the [pxe_dust cookbook](https:
 Requirements
 ============
 
-The `metadata.rb` requires `build-essential` so there is a working build tool chain.
+The `metadata.rb` requires the `build-essential` and `git` cookbooks so there is a working build tool chain.
 
 Recipes
 =======
 
-build
------
-Downloads the iPXE source from http://git.ipxe.org/ipxe.git and builds it.
+install
+-------
+Installs the required dependencies and checks out the iPXE source from http://git.ipxe.org/ipxe.git.
 
 chainload
 ---------
