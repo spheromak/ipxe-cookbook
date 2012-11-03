@@ -22,13 +22,12 @@ include_recipe "git"
 
 directory node['ipxe']['src_dir']
 
+%w{ genisoimage syslinux }.each { |pkg| package pkg }
+
 #git clone git://git.ipxe.org/ipxe.git
 git node['ipxe']['src_dir'] do
   repository 'git://git.ipxe.org/ipxe.git'
   reference 'HEAD'
   action :sync
-  not_if { ::FileTest.directory?('/opt/ec2_mysql/.git') }
+  not_if { ::FileTest.directory?("#{node['ipxe']['src_dir']}/.git") }
 end
-
-#cd ipxe/src
-#make
